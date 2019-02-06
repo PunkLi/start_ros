@@ -31,3 +31,5 @@
 .vscode
 build
 *.cmake
+devel/lib
+devel/share
