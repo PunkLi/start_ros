@@ -1,0 +1,8 @@
+prefix=/home/linux/catkin_ws/devel
+
+Name: actionlib_demo
+Description: Description of actionlib_demo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/linux/catkin_ws/devel/lib 
+Requires: 
