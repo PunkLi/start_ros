@@ -104,6 +104,9 @@ include_directories(
 add_executable(talker src/talker.cpp)
 add_executable(listener src/listener.cpp)
 
+add_executable(add_two_ints_server src/add_two_ints_server.cpp)
+add_executable(add_two_ints_client src/add_two_ints_client.cpp)
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -114,8 +117,14 @@ add_executable(listener src/listener.cpp)
 ## same as for the library above
 add_dependencies(talker ${catkin_EXPORTED_TARGETS})
 
+add_dependencies(add_two_ints_server beginner_tutorials_gencpp)
+add_dependencies(add_two_ints_client beginner_tutorials_gencpp)
+
 target_link_libraries(talker ${catkin_LIBRARIES})
 target_link_libraries(listener ${catkin_LIBRARIES})
+
+target_link_libraries(add_two_ints_server ${catkin_LIBRARIES})
+target_link_libraries(add_two_ints_client ${catkin_LIBRARIES})
 
 #############
 ## Install ##
