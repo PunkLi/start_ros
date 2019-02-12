@@ -1,0 +1,9 @@
+<launch>
+
+	<param name="usb_cam_id" value="/dev/video0" />
+	<param name="video_name" value="/home/linux/ros_ws/video/demo.mp4"/>
+	<param name="video_fps" value="30" />		
+
+	<node pkg="camera" type="camera_node" name="camera_node" output="screen" />
+	<node pkg="camera" type="camera_show_node" name="camera_show_node" output="screen" />
+</launch>
